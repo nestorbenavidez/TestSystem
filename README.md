@@ -1,3 +1,15 @@
+# List of Requirements 
+Test System 1.0
+
+* Create a web based system requiring authentication  
+* you can use admin/admin as username/password    
+* Once authenticated user can create customers, First, Last, phone and upload of an image.
+* Once customer is crated, user can see the list of customers already created.
+* A customer can then have a Project assigned to them, so in a customer profile, the user can click “add project”
+* A project would have a Name, Description, Due Date and a cost.
+* A customer can have up to two active projects, no more than two can be assigned unless one project is deactivated. Projects can be   seen/sorted in any view type you wish.
+* Last requirement: An existing project can be “copied” (used as a template), and assigned to a different customer.
+
 # Installing
 
 Prerequisites 
