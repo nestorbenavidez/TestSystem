@@ -1,24 +1,21 @@
-# README
+# Installing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prerequisites 
+* ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-linux]
+* Rails 5.2.3
 
-Things you may want to cover:
+Installation procedure 
 
-* Ruby version
+* Clone git repository to your local machine
+* 'bundle install' to install all necessary gems 
+* Local project runs on SQLite so you need to prepare DB with the following:
 
-* System dependencies
+1. rake db:drop && rake db:create 
+2. rake db:migrate
+3. rake db:seeds (this will create the user admin/admin)
 
-* Configuration
+* Run embedded PUMA server with 'rails s'
+* Open your browser at http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# History of commands used to create project
+...
