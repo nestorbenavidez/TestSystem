@@ -4,4 +4,5 @@ class Project < ApplicationRecord
   validates :description, presence: true
   validates :cost,:presence => true,
             :numericality => true
+  enum status: [:inactive, :active]
 end

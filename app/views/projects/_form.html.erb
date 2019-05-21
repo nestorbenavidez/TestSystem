@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.select :status, Project.statuses.keys %>
   </div>
 
   <div class="actions">

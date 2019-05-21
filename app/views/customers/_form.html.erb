@@ -34,7 +34,7 @@
   <div class="field">
     <%= label_tag "Projects:" %>
     <p>
-    <% Project.all.each do |category| %>
+    <% Project.where(:status => 1).each do |category| %>
       <%= check_box_tag 'customer[project_ids][]', category.id, @customer.project_ids.include?(category.id), id: dom_id(category) %>
       <%= label_tag dom_id(category), category.name %><br>
     <% end %>

@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_150436) do
     t.string "description"
     t.datetime "due_date"
     t.decimal "cost", precision: 8, scale: 2
-    t.string "status"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
