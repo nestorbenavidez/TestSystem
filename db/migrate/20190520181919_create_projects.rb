@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.datetime :due_date
-      t.decimal :cost
+      t.decimal :cost, :precision => 8, :scale => 2
       t.string :status
 
       t.timestamps
