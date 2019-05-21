@@ -11,6 +11,10 @@ Test System 1.0
 * Last requirement: An existing project can be “copied” (used as a template), and assigned to a different customer.
 
 # Installing
+Main gems
+* Sorcery - User Admin and Sessions
+* Carrierwave- Image upload 
+* erd - Entity Relationship Diagram creation for testing
 
 Prerequisites 
 * ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-linux]

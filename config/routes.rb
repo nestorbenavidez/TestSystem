@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+  resources :customers
   get 'pages/dashboard'
   get 'pages/login'
   root :to => "pages#dashboard"
