@@ -6,4 +6,14 @@ class Customer < ApplicationRecord
   validates :phone,:presence => true,
             :numericality => true,
             :length => { :minimum => 10, :maximum => 15 }
+  validate :validate_two_projects
+
+  private
+
+  def validate_two_projects
+    if self.project_ids.count > 2
+      errors.add( :project_ids, "The max number of active projects per person is 2")
+    end
+  end
+
 end
