@@ -1,0 +1,1000 @@
+ 1052  clear
+ 1053  git commit -a -m "Adding front end"
+ 1054  git push origin master
+ 1055  cd ..
+ 1056  ruby -v
+ 1057  clear
+ 1058  ls
+ 1059  cd glife-ecommerce
+ 1060  clear
+ 1061  bundle exec erd
+ 1062  git status
+ 1063  git add .
+ 1064  git commit -a -m "Clean ERD"
+ 1065  git pull origin dev
+ 1066  clear
+ 1067  git status
+ 1068  rails s
+ 1069  bundle install
+ 1070  rake db:drop
+ 1071  rake db:create
+ 1072  rake db:migrate
+ 1073  rails s
+ 1074  exit
+ 1075  rake db:migrate
+ 1076  rake db:seed
+ 1077  git status
+ 1078  git add .
+ 1079  git commit -a -m "Overwrite Account for Accounts and create Resource"
+ 1080  git push origin dev
+ 1081  rails g scaffold Account billing_address:string status:string amount:decimal
+ 1082  rails g scaffold Account billing_address:string status:string amount:decimal --skip-migration
+ 1083  rails routes
+ 1084  git status
+ 1085  git add .
+ 1086  git status
+ 1087  git commit -a -m "cleaning account crud and re routing"
+ 1088  git push origin dev
+ 1089  git status
+ 1090  git add .
+ 1091  git commit -a -m "Edit dashboard"
+ 1092  git push origin dev
+ 1093  rails g scaffold Taxonomy name position:integer  --skip-migration
+ 1094  git status
+ 1095  git add .
+ 1096  git commit -a -m "Make different collapsing boxes work at the same time and create taxonomies CRUD views"
+ 1097  git push origin dev
+ 1098  git checkout -b dev-admin
+ 1099  git push origin dev
+ 1100  git push origin dev-admin
+ 1101  git status
+ 1102  rails g scaffold Taxon parent_id:integer position:integer name permalink lft:integer rgt:integer description:text meta_title meta_description meta_keywords depth:integer Taxonomy:reference  --skip-migration
+ 1103  git status
+ 1104  git add .
+ 1105  git commit -a -m "Add views to taxons create link on left meny and re routing"
+ 1106  git statu
+ 1107  git status
+ 1108  git push origin dev-admin
+ 1109  git status
+ 1110  git add .
+ 1111  git commit -a -m "clean up old views on taxon and taxonomy and taking off category views, also re routing"
+ 1112  git push origin dev-admin
+ 1113  rails sample_data:load
+ 1114  cd ..
+ 1115  cd sajonia-core
+ 1116  clear
+ 1117  ls
+ 1118  ruby -v
+ 1119  cd ..
+ 1120  cd glife-ecommerce
+ 1121  ruby -v
+ 1122  rails g scaffold Product --skip-migration
+ 1123  clear
+ 1124  git status
+ 1125  git add .
+ 1126  git status
+ 1127  git commit -a -m "Overwrite taxons"
+ 1128  git push origin dev-admin
+ 1129  rails s
+ 1130  rails g scaffold Productname description:text name available_on:datetime discontinue_on:datetime delete_at:datetime slug meta_description:text image_url meta_keywords tax_category_id:integer shipping_category_id:integer promotionable:boolean meta_title --skip-migration
+ 1131  git status
+ 1132  git add .
+ 1133  git commit -a -m "Add Product views and integrate them with dashboard, re routing"
+ 1134  git push origin dev-admin
+ 1135  rails destroy scaffold Productname description:text name available_on:datetime discontinue_on:datetime delete_at:datetime slug meta_description:text image_url meta_keywords tax_category_id:integer shipping_category_id:integer promotionable:boolean meta_title --skip-migration
+ 1136  rails g scaffold Product name description:text name available_on:datetime discontinue_on:datetime delete_at:datetime slug meta_description:text image_url meta_keywords tax_category_id:integer shipping_category_id:integer promotionable:boolean meta_title --skip-migration
+ 1137  git status
+ 1138  git add .
+ 1139  git commit -a -m "destroy error momdel productname and generate products again"
+ 1140  git status
+ 1141  git push origin dev-admin
+ 1142  rails s
+ 1143  rails g scaffold Role name description --skip-migration
+ 1144  rails s
+ 1145  rails g scaffold Company name location contact --skip-migration
+ 1146  ruby -v
+ 1147  bundle install
+ 1148  rails g scaffold Company name location contact --skip-migration
+ 1149  git status
+ 1150  git add .
+ 1151  git commit -a -m "Clean company crud, add theme and integrate with dashboard"
+ 1152  git push origin dev-admin
+ 1153  rails s
+ 1154  rake db:migrate
+ 1155  rake db:reset
+ 1156  rails s
+ 1157  exit
+ 1158  cd ..
+ 1159  ls
+ 1160  cd personal
+ 1161  ls
+ 1162  clear
+ 1163  ls
+ 1164  cd ..
+ 1165  cd sajonia-core
+ 1166  clear
+ 1167  ls
+ 1168  clear
+ 1169  ls
+ 1170  cd ..
+ 1171  cd glife-ecommerce
+ 1172  git status
+ 1173  git add .
+ 1174  git commit -a -m "Fix type of deleted_at"
+ 1175  git push origin dev-admin
+ 1176  git status
+ 1177  git add .
+ 1178  git statuts
+ 1179  git status
+ 1180  git commit -a -m "adding layout to product taxonomies and taxons and also cleaning taxonomy_controller" 
+ 1181  git push origin dev-admin
+ 1182  git status
+ 1183  git add .
+ 1184  git commit -a -m "test dashbooard layout" 
+ 1185  git push origin dev-admin
+ 1186  git status
+ 1187  git add .
+ 1188  git commit -a -m "pick fields to show on lists and checkover new layout"
+ 1189  git push origin dev-admin
+ 1190  git status
+ 1191  git add .
+ 1192  git commit -a -m "Adding search functionality and pagination to product module"
+ 1193  git push origin dev-admin
+ 1194  git status
+ 1195  git add .
+ 1196  git commit -a -m "layout over _forms"
+ 1197  git push origin dev-admin
+ 1198  git status
+ 1199  git add .
+ 1200  git commit -a -m "Rollback Product model"
+ 1201  git push origin dev-admin
+ 1202  clear
+ 1203  git status
+ 1204  git add .
+ 1205  git commit -a -m "Integrate Roles views, re route and add theme"
+ 1206  git push origin dev-admin
+ 1207  git pull origin dev-admin
+ 1208  git add .
+ 1209  git commit -a -m "Conflict Resolved"
+ 1210  git pull origin dev-admin
+ 1211  git push origin dev-admin
+ 1212  git status
+ 1213  git add . 
+ 1214  git commit -a -m "Applying theme to Accounts CRUD"
+ 1215  git push origin dev-admin
+ 1216  git status
+ 1217  git add .
+ 1218  git commit -a -m "add model product_taxons"
+ 1219  cd ..
+ 1220  clear
+ 1221  ls
+ 1222  cd nci-core
+ 1223  ruby -v
+ 1224  rails s
+ 1225  ls
+ 1226  bundle install
+ 1227  rails s
+ 1228  clear
+ 1229  rails s
+ 1230  bundle install
+ 1231  rvn rubies
+ 1232  rvm list
+ 1233  rvm use 2.5.0
+ 1234  clear
+ 1235  ruby -v
+ 1236  rails s
+ 1237  rails c
+ 1238  rvm use 2.5.0
+ 1239  rails c
+ 1240  rake db:seed
+ 1241  rails c
+ 1242  rake db:seed
+ 1243  rails c
+ 1244  clear
+ 1245  rake routes
+ 1246  exit
+ 1247  cd Documents
+ 1248  clear
+ 1249  ls
+ 1250  cd nci-core
+ 1251  rvm use 2.5.0
+ 1252  bundle install
+ 1253  rails s
+ 1254  clear
+ 1255  bundle install
+ 1256  rails s
+ 1257  clear
+ 1258  cd ..
+ 1259  cd glife-ecommerce
+ 1260  clear
+ 1261  ls
+ 1262  ruby -v
+ 1263  cd Documents
+ 1264  cd glife-ecommerce
+ 1265  git pull origin dev
+ 1266  git status
+ 1267  git merge dev
+ 1268  rails s
+ 1269  rvm list
+ 1270  bundle install
+ 1271  rake db:migrate
+ 1272  rails s
+ 1273  cd ..
+ 1274  cd nci-core
+ 1275  rails s
+ 1276  exit
+ 1277  cd ..
+ 1278  cd nci-core
+ 1279  rails c
+ 1280  clear
+ 1281  rake routes
+ 1282  clear
+ 1283  rake routes
+ 1284  rails g Insurance_program name broker_fee:decimal inspection_fee:decimal surplus_fee:decimal surplus_tax:decimal
+ 1285  rails g scaffold Insurance_program name broker_fee:decimal inspection_fee:decimal surplus_fee:decimal surplus_tax:decimal
+ 1286  rails g scaffold limit name  insurance_program:reference 
+ 1287  rails g scaffold field_class name  insurance_program:reference 
+ 1288  rails g scaffold range name value:decimal insurance_program:reference 
+ 1289  rails g scaffold calculation_range name value:decimal insurance_program:reference 
+ 1290  rails g scaffold name apr insurance_program:reference 
+ 1291  rake db:migrate
+ 1292  git status
+ 1293  git add .
+ 1294  git commit -a -m "Adding models to system"
+ 1295  git push origin master
+ 1296  git push heroku master
+ 1297  clear
+ 1298  cd ..
+ 1299  cd glife-ecommerce
+ 1300  rails s
+ 1301  bundle install
+ 1302  rails s
+ 1303  git status
+ 1304  git add .
+ 1305  git commit -a -m "Ready to pull"
+ 1306  git pull origin dev-admin
+ 1307  git checkout dev
+ 1308  clear
+ 1309  git status
+ 1310  git pull origin dev
+ 1311  git status
+ 1312  Rails db:seed sample_data:load
+ 1313  rake db:seed sample_data:load
+ 1314  clear
+ 1315  git status
+ 1316  git add . 
+ 1317  git commit -a -m "taking away repeated name"
+ 1318  rails c
+ 1319  git status
+ 1320  git add .
+ 1321  git commit -a -m "create relationship view between taxons and products using checkboxes"
+ 1322  git push origin dev
+ 1323  git status
+ 1324  git add .
+ 1325  git commit -a -m "showing taxons in show product page"
+ 1326  git push origin dev
+ 1327  git status
+ 1328  git add .
+ 1329  git commit -a -m "Clearn option type views
+ 1330  "
+ 1331  clear
+ 1332  rails g scaffold option_type name presentation position:integer --skip-migration
+ 1333  git status
+ 1334  git add .
+ 1335  git commit -a -m "Create and re route option type model and controller"
+ 1336  rake db:seed sample_data:load
+ 1337  git status
+ 1338  git add .
+ 1339  git commit -a -m " Editing Product to include has to many and belongs to relationship with option type"
+ 1340  git push origin dev
+ 1341  git status
+ 1342  git checkout dev-admin
+ 1343  git merge dev
+ 1344  git status
+ 1345  git add .
+ 1346  git commit -a -m "Add theme to option types"
+ 1347  git push origin dev
+ 1348  git push origin dev-admin
+ 1349  git pull origin dev-admin
+ 1350  git commit
+ 1351  git add .
+ 1352  git commit
+ 1353  git pull origin dev-admin
+ 1354  git push origin dev-admin
+ 1355  git checkout dev
+ 1356  git checkout dev-admin
+ 1357  rake db:migrate
+ 1358  cd Documents
+ 1359  clera
+ 1360  clear
+ 1361  cd glife-ecommerce
+ 1362  rake db:migrate
+ 1363  git status
+ 1364  git add .
+ 1365  git commit -a -m "last min change in form"
+ 1366  git checkout dev
+ 1367  git pull origin dev
+ 1368  git status
+ 1369  git checkout dev-admin
+ 1370  git merge dev
+ 1371  rake db:migrate
+ 1372  rails s
+ 1373  clear
+ 1374  git status
+ 1375  git add .
+ 1376  git commit -a -m "merge last changes in dev"
+ 1377  git push origin dev-admin
+ 1378  cd ..
+ 1379  clear
+ 1380  cd nci-core
+ 1381  clear
+ 1382  ls
+ 1383  rails s
+ 1384  exit
+ 1385  rails c
+ 1386  ruby -v
+ 1387  rvm use 2.5.0
+ 1388  rails c
+ 1389  rake route
+ 1390  rake routes
+ 1391  bundle install
+ 1392  rails s
+ 1393  clear
+ 1394  bundle install
+ 1395  rvm use 2.5.0
+ 1396  rails
+ 1397  rails s
+ 1398  bundle install
+ 1399  rvm use 2.5.0
+ 1400  bundle install
+ 1401  rake routes
+ 1402  bundle install
+ 1403  clear
+ 1404  rails generate simple_form:install --bootstrap
+ 1405  cd glife-ecommerce
+ 1406  cd Documents/glife-ecommerce
+ 1407  rails s
+ 1408  git status
+ 1409  git add . 
+ 1410  git commit -a -m "Showing option values on Option Type Show"
+ 1411  git status
+ 1412  git push origin 5_option_type
+ 1413  git checkout -b 4_taxons_fix
+ 1414  rails s
+ 1415  rails c
+ 1416  git
+ 1417  git status
+ 1418  git add .
+ 1419  git status
+ 1420  git commit -a -m "Add migration with slug column in order to use friendly id, also search in Taxonomy to name instead of number in show page, tested CRUD functions"
+ 1421  git push origin 4_taxons_fix
+ 1422  git status
+ 1423  git add .
+ 1424  git commit -a -m "Fixing selects"
+ 1425  git status
+ 1426  git checkout -b 3_taxons_fix
+ 1427  git push origin 3_taxons_fix
+ 1428  clear
+ 1429  ls
+ 1430  clear
+ 1431  git status
+ 1432  git checkout 2_products_fix
+ 1433  git checkout -b 2_products_fix
+ 1434  rails g migration MakeDiscontinueOnNullableInProducts
+ 1435  rake db:migrate
+ 1436  git status
+ 1437  git add .
+ 1438  git status
+ 1439  git commit -a -m "Make discontinue on nullable via migration and take off several fields that are not need it"
+ 1440  git status
+ 1441  git push origin 2_products_fix
+ 1442  git branch
+ 1443  git checkout 3_taxons_fix
+ 1444  git status
+ 1445  git add .
+ 1446  git commit -a -m "Change to full search on taxonomies"
+ 1447  git push origin 3_taxons_fix
+ 1448  clear
+ 1449  git status
+ 1450  git checkout -b price_group
+ 1451  rails g model price_group reference:variants
+ 1452  rake db:migrate
+ 1453  rake db:reset
+ 1454  git status
+ 1455  git add .
+ 1456  git status
+ 1457  git commit -a -m "Create price_group relationships note: none of them are optional"
+ 1458  git push origin price_group
+ 1459  clear
+ 1460  ls
+ 1461  cd glife-ecommerce
+ 1462  cd Documents
+ 1463  ls
+ 1464  cd glife-ecommerce
+ 1465  clear
+ 1466  git status
+ 1467  git checkout 5_option_type
+ 1468  git checkout -b 5_option_type
+ 1469  rails s
+ 1470  clear
+ 1471  bundle install
+ 1472  clear
+ 1473  rails g migration AddSlugToUsers slug:uniq
+ 1474  rails g migration AddSlugToTaxons slug:uniq
+ 1475  rails generate friendly_id
+ 1476  rails db:migrate
+ 1477  rails s
+ 1478  cd Documents
+ 1479  cd glife-ecommerce
+ 1480  git status
+ 1481  git add .
+ 1482  git commit -a -m "change relationship user - group price"
+ 1483  git add .
+ 1484  git commit -a -m "using & in order to avoid method over nil"
+ 1485  git status
+ 1486  git add .
+ 1487  git commit -a -m "Change on naming convention for migration"
+ 1488  git status
+ 1489  git checkout dev
+ 1490  git pull origin dev
+ 1491  git status
+ 1492  git branch
+ 1493  git checkout price_group
+ 1494  git status
+ 1495  git merge dev
+ 1496  rails s
+ 1497  bundle install
+ 1498  rails s
+ 1499  intelliJ
+ 1500  sudo snap install rubymine --classic
+ 1501  cd Documents
+ 1502  cd glife-ecommerce
+ 1503  git checkout dev
+ 1504  git checkout -f dev
+ 1505  git pull origin dev
+ 1506  git status
+ 1507  rake db:reset
+ 1508  bundle install
+ 1509  rake db:reset
+ 1510  rails s
+ 1511  ruby -v
+ 1512  cd ..
+ 1513  mkdir work
+ 1514  cd work
+ 1515  git clone https://github.com/wayneangoh/glife-ecommerce.git
+ 1516  ls
+ 1517  cd glife-ecommerce
+ 1518  clear
+ 1519  bundle install
+ 1520  rake db:drop && rake db:create
+ 1521  rake db:migrate
+ 1522  rake db:seed
+ 1523  rails s
+ 1524  git stauts
+ 1525  git status
+ 1526  git branch
+ 1527  git fetch
+ 1528  git checkout merged-admin
+ 1529  git checkout merged-dev
+ 1530  git checkout merged-admin
+ 1531  cd Documents
+ 1532  clear
+ 1533  ls
+ 1534  cd glife-ecommerce
+ 1535  cd work
+ 1536  clear
+ 1537  ls
+ 1538  cd glife-ecommerce
+ 1539  git status
+ 1540  rails s
+ 1541  git status
+ 1542  git branch
+ 1543  git checkout -b myprofile_page
+ 1544  git status
+ 1545  rails s
+ 1546  git status
+ 1547  rails s
+ 1548  git status
+ 1549  rails s
+ 1550  git status
+ 1551  git add app/views/profiles/_company.html.erb
+ 1552  git add app/views/profiles/_delivery.html.erb
+ 1553  git add app/views/profiles/_password.html.erb
+ 1554  gti add app/views/profiles/_settings.html.erb
+ 1555  git add app/views/profiles/_settings.html.erb
+ 1556  clear
+ 1557  git status
+ 1558  git add app/views/profiles/_user_details.html.erb
+ 1559  git add app/views/profiles/index.html.erb
+ 1560  git status
+ 1561  git commit -m "separate in smaller forms user editing details"
+ 1562  git push origin myprofile_page
+ 1563  rake db:seed sample_data:load
+ 1564  git status
+ 1565  cd Documents
+ 1566  cd work
+ 1567  cd glife-ecommerce
+ 1568  git status
+ 1569  clear
+ 1570  git branch
+ 1571  git checkout myprofile_page
+ 1572  clear
+ 1573  rails s
+ 1574  rails c
+ 1575  rake db:seed
+ 1576  rails c
+ 1577  clear
+ 1578  rake routes
+ 1579  cd Documents
+ 1580  clear
+ 1581  cd work
+ 1582  ls
+ 1583  clear
+ 1584  ls
+ 1585  cd glife-ecoommerce
+ 1586  cd glife-ecoomerce
+ 1587  cd glife-ecommerce
+ 1588  clear
+ 1589  git status
+ 1590  rails s
+ 1591  rails c
+ 1592  cd Documents
+ 1593  cd work
+ 1594  cd glife-ecommerce
+ 1595  rails s
+ 1596  lsof -wni tcp:3000
+ 1597  kill -9 $(lsof -i tcp:3000 -t)
+ 1598  rails s
+ 1599  kill -9 $(lsof -i tcp:3000 -t)
+ 1600  rails s
+ 1601  cd Desktop
+ 1602  rails new TimeTest
+ 1603  ls
+ 1604  cd TimeTest
+ 1605  rails g scaffold Movie movietime:time
+ 1606  rails s
+ 1607  rake db:migrate
+ 1608  rails s
+ 1609  cd Documents
+ 1610  cd work
+ 1611  cd glife-ecommerce
+ 1612  rails s
+ 1613  rails c
+ 1614  git status
+ 1615  git add app/controllers/dashboard/users_controller.rb
+ 1616  git add app/controllers/profiles_controller.rb
+ 1617  git add app/models/user.rb
+ 1618  git add app/views/profiles/_company.html.erb
+ 1619  git add app/views/profiles/_delivery.html.erb
+ 1620  git add app/views/profiles/_password.html.erb
+ 1621  git add app/views/profiles/_settings.html.erb
+ 1622  git add app/views/profiles/_user_details.html.erb
+ 1623  git add config/routes.rb
+ 1624  git status
+ 1625  git commit -m "Merged issues in other branches"
+ 1626  git push origin myprofile_page
+ 1627  rake routes
+ 1628  git status
+ 1629  git add app/controllers/dashboard/users_controller.rb
+ 1630  git add app/controllers/profiles_controller.rb
+ 1631  git add app/views/profiles/_company.html.erb
+ 1632  git add app/views/profiles/_delivery.html.erb
+ 1633  git add app/views/profiles/_password.html.erb
+ 1634  git add app/views/profiles/_settings.html.erb
+ 1635  git add app/views/profiles/_user_details.html.erb
+ 1636  git add config/routes.rb
+ 1637  git status
+ 1638  git commit -m "Clean up and using simple_forms, rerouting"
+ 1639  git push origin myprofile_page
+ 1640  git status
+ 1641  git add app/models/billing_address.rb
+ 1642  git add app/views/profiles/_delivery.html.erb
+ 1643  git add app/views/profiles/_password.html.erb
+ 1644  git status
+ 1645  git commit -m  "Fix typo in submit and add billing add"
+ 1646  git push origin myprofile_page
+ 1647  git status
+ 1648  git add app/controllers/profiles_controller.rb
+ 1649  git status
+ 1650  git commit -m "add deleted mthod"
+ 1651  git pull origin myprofile_page
+ 1652  git push origin myprofile_page
+ 1653  rake db:migrate
+ 1654  bundle install
+ 1655  rake db:migrate
+ 1656  bundle install
+ 1657  rake db:migrate
+ 1658  bundle install
+ 1659  rake db:migrate
+ 1660  bundle install
+ 1661  rake db:migrate
+ 1662  bundle install
+ 1663  rake db:migrate
+ 1664  git status
+ 1665  git push origin myprofile_page
+ 1666  git reset --hard 
+ 1667  git reset --hard a9747bf
+ 1668  git reset --hard 5dde915
+ 1669  git status
+ 1670  git add app/controllers/profiles_controller.rb
+ 1671  git commit -m "undelete frequent product"
+ 1672  git push origin myprofile_page
+ 1673  git status
+ 1674  git add config/routes.rb
+ 1675  git commit -m "clean routes"
+ 1676  git push origin myprofile_page
+ 1677  git status
+ 1678  git branch
+ 1679  git checkout dev
+ 1680  clear
+ 1681  git pull origin dev
+ 1682  bin/rails db:migrate RAILS_ENV=development
+ 1683  sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+ 1684  rake db:drop
+ 1685  bundle install
+ 1686  rake db:create
+ 1687  /var/lib/mysql/mysql.sock
+ 1688  sudo /var/lib/mysql/mysql.sock
+ 1689  sudo cd /var/lib/mysql
+ 1690  cd /var/lib/mysql
+ 1691  sudo cd /var/lib/mysql
+ 1692  grep mysql.sock.
+ 1693  grep mysql.sock
+ 1694  mysqladmin -p -u root variables
+ 1695  rake db:create
+ 1696  rake db:migrate
+ 1697  rake db:seed
+ 1698  clear
+ 1699  rake db:seed sample_data:load
+ 1700  rails c
+ 1701  git status
+ 1702  git checkout -b completed_orders_history
+ 1703  git status
+ 1704  git add app/views/profiles/_order.html.erb
+ 1705  git add db/schema.rb
+ 1706  git commit -m "Change history of my orders view to a more compact design and showing total"
+ 1707  git status
+ 1708  git add app/views/profiles/_order.html.erb
+ 1709  git add app/views/profiles/_order_completed.html.erb
+ 1710  git status
+ 1711  git commit -m "Adding images and change style to fit"
+ 1712  git push origin completed_orders_history
+ 1713  git status
+ 1714  git checkout dev
+ 1715  git status
+ 1716  git checkout admin_place_orders
+ 1717  git checkout -b admin_place_orders
+ 1718  git status
+ 1719  git add app/controllers/dashboard/users_controller.rb
+ 1720  git commit -m "Create method become to sign as another user"
+ 1721  rake route
+ 1722  rake routes
+ 1723  clear
+ 1724  git status
+ 1725  bundle install 
+ 1726  rake routes
+ 1727  bundle install
+ 1728  rake routes
+ 1729  git checkout dev
+ 1730  git status
+ 1731  git add devise/masquerades#show
+ 1732  git add Gemfile
+ 1733  git add Gemfile.lock
+ 1734  git add app/controllers/application_controller.rb
+ 1735  git add app/controllers/dashboard/users_controller.rb
+ 1736  git add app/models/user.rb
+ 1737  git add app/views/dashboard/users/edit.html.erb
+ 1738  git add config/initializers/devise.rb
+ 1739  git add  config/routes.rb
+ 1740  git status
+ 1741  git commit -m "Installed and use devise masquerade in order to login as different user from admin dashboard"
+ 1742  git push origin admin_place_orders
+ 1743  git status
+ 1744  git add app/views/dashboard/users/edit.html.erb
+ 1745  git commit -m "Add link to specific user in order to signin as him"
+ 1746  git status
+ 1747  git push origin admin_place_orders
+ 1748  git status
+ 1749  git add app/views/dashboard/users/edit.html.erb
+ 1750  git commit -m "Fix typo on link"
+ 1751  git push origin admin_place_orders
+ 1752  rails c
+ 1753  git status
+ 1754  git push origin admin_place_orders
+ 1755  git branch dev
+ 1756  git checkout dev
+ 1757  git branch
+ 1758  git checkout completed_orders_history
+ 1759  rake route
+ 1760  rake routes
+ 1761  clear
+ 1762  git statuts
+ 1763  git status
+ 1764  git add .
+ 1765  git status
+ 1766  git commit -a -m "create partials for order report, order completed, order line report as well as changes on controller to support them and re routing"
+ 1767  git push origin complete_orders_history
+ 1768  git push origin completed_orders_history
+ 1769  git pull origin completed_orders_history
+ 1770  git push origin completed_orders_history
+ 1771  git status
+ 1772  git add app/views/dashboard/orders/_order_line_report.html.erb
+ 1773  git commit -m "Form to send reports"
+ 1774  git push origin completed_orders_history
+ 1775  git status
+ 1776  git branch
+ 1777  git checkout admin_place_orders
+ 1778  git checkout -f admin_place_orders
+ 1779  git status
+ 1780  clear
+ 1781  git status
+ 1782  git branch
+ 1783  git checkout myprofile_page
+ 1784  git status
+ 1785  git add app/views/profiles/_delivery.html.erb
+ 1786  git status
+ 1787  git commit -m "Billing address fix"
+ 1788  git push origin myprofile_page
+ 1789  git pull origin myprofile_page
+ 1790  git push origin myprofile_page
+ 1791  clear
+ 1792  git reset --hard 6396c1f
+ 1793  git push origin myprofile_page
+ 1794  git branch
+ 1795  git checkout completed_orders_history
+ 1796  git checkout -f completed_orders_history
+ 1797  git checkout -f admin_place_orders
+ 1798  git status
+ 1799  git Documents
+ 1800  clear
+ 1801  cd Documents
+ 1802  cd work
+ 1803  clear
+ 1804  ls
+ 1805  cd glife-ecommerce
+ 1806  clear
+ 1807  ls
+ 1808  git status
+ 1809  rails s
+ 1810  gem 'devise_invitable', '~> 2.0.0'
+ 1811  bundle install
+ 1812  clear
+ 1813  rails g devise_invitable:install
+ 1814  rails generate devise_invitable user
+ 1815  rake db:migrate
+ 1816  rails c
+ 1817  clear
+ 1818  git status
+ 1819  git reset head .idea/dataSources.xml
+ 1820  git checkout -- .idea/dataSources.xml
+ 1821  git status
+ 1822  git reset HEAD .idea/dataSources.xml
+ 1823  git add Gemfile
+ 1824  git add Gemfile.lock
+ 1825  git add app/views/dashboard/users/_form.html.erb
+ 1826  git add config/initializers/devise.rb
+ 1827  git add db/schema.rb
+ 1828  git status
+ 1829  git add config/locales/devise_invitable.en.yml
+ 1830  git add db/migrate/20190506012211_devise_invitable_add_to_users.rb
+ 1831  git status
+ 1832  git commit -m "set up invitable"
+ 1833  git push origin admin_place_orders
+ 1834  git reset HEAD .idea/
+ 1835  git status
+ 1836  git delete .idea/
+ 1837  clear
+ 1838  git status
+ 1839  cd Documents
+ 1840  cd work
+ 1841  ls
+ 1842  cd glife-ecommerce
+ 1843  git status
+ 1844  git checkout dev
+ 1845  git pull origin dev
+ 1846  netbeans
+ 1847  clear
+ 1848  ls
+ 1849  cd netbeans-8.2
+ 1850  clear
+ 1851  ls
+ 1852  ./uninstall.sh
+ 1853  ./
+ 1854  ./netbeans-8.2/uninstall.sh
+ 1855  datagrip
+ 1856  sudo snap uninstall intellij
+ 1857  sudo snap -help
+ 1858  sudo snap -h
+ 1859  sudo snap remove intellij
+ 1860  rmdir -f .IntelliJIdea2018.2
+ 1861  rmdir --help
+ 1862  rmdir --ignore-fail-on-no-empty .IntelliJIdea2018.2
+ 1863  rmdir --ignore-fail-on-non-empty .IntelliJIdea2018.2
+ 1864  clear
+ 1865  ls -a
+ 1866  rm -R .RubyMine2018.2
+ 1867  ls -a
+ 1868  rm -R .IntelliJIdea2018.2
+ 1869  rm -R .IntelliJIdea2019.1
+ 1870  clear
+ 1871  cd netbeans
+ 1872  ls
+ 1873  cd Documents
+ 1874  cd netbeans
+ 1875  ls
+ 1876  cd ..
+ 1877  clear
+ 1878  ls
+ 1879  cd netbeans-8.2
+ 1880  ls
+ 1881  ./uninstall.sh
+ 1882  cd ..
+ 1883  ls -a
+ 1884  cd .netbeans
+ 1885  clear
+ 1886  ls
+ 1887  cd 8.2
+ 1888  ls
+ 1889  rm lock
+ 1890  ls
+ 1891  cd ..
+ 1892  cd netbeans-8.2
+ 1893  ./uninstall.sh
+ 1894  cd ..
+ 1895  ls -a
+ 1896  rm -R .netbeans
+ 1897  ls
+ 1898  rm -R NetBeansProjects
+ 1899  clear
+ 1900  ls
+ 1901  cd ..
+ 1902  ls
+ 1903  cd var
+ 1904  ls
+ 1905  cd ..
+ 1906  cd usr
+ 1907  clear
+ 1908  ls
+ 1909  cd bin
+ 1910  ls
+ 1911  cd ..
+ 1912  clear
+ 1913  ls
+ 1914  cd local
+ 1915  ls
+ 1916  cd etc
+ 1917  ls
+ 1918  locate libreoffice|grep bin
+ 1919  locate intelliJ|grep bin
+ 1920  locate intell|grep bin
+ 1921  locate intelliJ|grep bin
+ 1922  locate intelliJUltimate|grep bin
+ 1923  locate libreoffic|grep bin
+ 1924  locate intel|grep 
+ 1925  locate intelliJ|grep sh
+ 1926  locate intelliJ|grep uninstall
+ 1927  ls -a
+ 1928  cd .local
+ 1929  ls
+ 1930  cd share
+ 1931  ls
+ 1932  cd JetBrains
+ 1933  clear
+ 1934  ls
+ 1935  cd bl
+ 1936  cd crk
+ 1937  cd crl
+ 1938  cd consentOptions
+ 1939  ls
+ 1940  gedit accepted
+ 1941  ls
+ 1942  gedit accepted
+ 1943  cd ..
+ 1944  cd /usr/
+ 1945  ls
+ 1946  cd local
+ 1947  ls
+ 1948  cd bin
+ 1949  clear
+ 1950  ls
+ 1951  cd idea
+ 1952  rm idea
+ 1953  sudo rm idea
+ 1954  cd ..
+ 1955  ls
+ 1956  cd bin
+ 1957  ls
+ 1958  cd ..
+ 1959  ls
+ 1960  clear
+ 1961  cd etc
+ 1962  ls
+ 1963  cd ..
+ 1964  clear
+ 1965  ls
+ 1966  cd lib
+ 1967  ls
+ 1968  cd ..
+ 1969  cd include
+ 1970  ls
+ 1971  cd ..
+ 1972  cd sbin
+ 1973  ls
+ 1974  cd ..
+ 1975  cd share
+ 1976  ls
+ 1977  cd ..
+ 1978  cd src
+ 1979  ls
+ 1980  clear
+ 1981  cd ~
+ 1982  ls
+ 1983  intellij
+ 1984  $ sudo snap remove intellij-idea-ultimate
+ 1985  sudo snap remove intellij-idea-ultimate
+ 1986  sudo snap install intellij-idea-ultimate
+ 1987  sudo snap install intellij-idea-ultimate --classic
+ 1988  sudo snap uninstall intellij-idea-ultimate 
+ 1989  sudo snap remove intellij-idea-ultimate 
+ 1990  clear
+ 1991  cd /opt/
+ 1992  ls
+ 1993  sudo rm -R idea-IU-182.3911.36
+ 1994  clear
+ 1995  ls
+ 1996  exit
+ 1997  ls
+ 1998  test
+ 1999  git status
+ 2000  git add .
+ 2001  git commit -a -m "Clean up assets, create dashboads and links to customers and projects, re route"
+ 2002  git push origin master
+ 2003  RAILS_ENV=development bin/rails assets:precompile
+ 2004  rake assets:clean
+ 2005  rake routes
+ 2006  RAILS_ENV=development bin/rails assets:precompile
+ 2007  bundle install
+ 2008  rake routes
+ 2009  git status
+ 2010  git add .
+ 2011  git commit -a -m "Create CRUD for Customers and Projects, re routes, fix javascript loading issue and enviroment issues"
+ 2012  git push origin master
+ 2013  rails g uploader image
+ 2014  bundle install
+ 2015  gem install rmagick -v '3.1.0' --source 'https://rubygems.org/'
+ 2016  sudo apt install imagemagick
+ 2017  bundle install
+ 2018  sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev
+ 2019  bundle install
+ 2020  git status
+ 2021  git add .
+ 2022  git commit -a -m "Add uploader, get carrierwave working for local upload and thumbnails and setup erd"
+ 2023  git push origin master
+ 2024  rake exec erd
+ 2025  bundle exec erd
+ 2026  rail g migration AddProjectIdToCustomer
+ 2027  rails g migration AddProjectIdToCustomer
+ 2028  rails g migration create_customers_projects customer_id:integer project_id:integer
+ 2029  rake db:migrate
+ 2030  bundle exec erd
+ 2031  git status
+ 2032  git add .
+ 2033  git commit -a -m "Add many to many capability to projects and customers"
+ 2034  git push origin master
+ 2035  clear
+ 2036  rails g sorcery:install core
+ 2037  rails g controller Sessions create destroy
+ 2038  rails destroy controller Sessions create destroy
+ 2039  rails g controller Sessions new
+ 2040  rake routes
+ 2041  rails c
+ 2042  rake db:drop
+ 2043  rake db:create
+ 2044  rake db:migrate
+ 2045  rake db:seed
+ 2046  rake routes
+ 2047  git status
+ 2048  git add .
+ 2049  git commit -a -m "login functionality setup"
+ 2050  git push origin master
+ 2051  history > history.txt
