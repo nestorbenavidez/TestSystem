@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
+  before_action :require_login
+
   def dashboard
   end
 
-  def login
-  end
 end
